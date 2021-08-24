@@ -1,0 +1,40 @@
+{
+  "name": "mario-slack-bot",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets @babel/preset-env\"",
+    "build": "babel src -s -D -d dist --presets @babel/preset-env",
+    "start": "node ./dist/index.js",
+    "stop": "NODE_ENV=production node dist --watch",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0",
+  "description": "a slack bot built with the latest apis",
+  "main": "index.js",
+  "author": "DevDr",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.6.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "corejs": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.7.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/node": "^16.4.12",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  }
+}
