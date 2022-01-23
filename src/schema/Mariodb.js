@@ -1,11 +1,10 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
 var adminSchema = new Schema({
   email: {
     type: String,
-    required: true,
   },
   password: {
     type: String,
@@ -17,4 +16,4 @@ var adminSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Admins', adminSchema);
+module.exports = mongoose.model("Admins", adminSchema);
